@@ -103,6 +103,8 @@
 		<maven-surefire-report-plugin.version>2.17</maven-surefire-report-plugin.version>
 		<log4j.version>1.2.17</log4j.version>
 		<tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
+
+		<org.azolla.open.ling.version>0.0.1</org.azolla.open.ling.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -167,6 +169,11 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>${tomcat7-maven-plugin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.azolla.open</groupId>
+				<artifactId>org.azolla.open.ling</artifactId>
+				<version>${org.azolla.open.ling.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

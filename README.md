@@ -1,4 +1,4 @@
-## Azolla Project
+## Azolla Project [![Build Status](https://travis-ci.org/Azollas/org.azolla.p.png?branch=mirror)](https://travis-ci.org/Azollas/org.azolla.p) 
 More to see [p.azolla.org][].
 
 ## License

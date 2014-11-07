@@ -4,8 +4,8 @@
 	<artifactId>org.azolla.p</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
-	<name>Azolla.org Project Top Parent</name>
-	<description>This project is Azolla.org project top parent</description>
+	<name>Azolla.org Projects Top Parent</name>
+	<description>This project is Azolla.org projects top parent</description>
 	<url>https://github.com/Azollas/org.azolla.p</url>
 	<inceptionYear>2011</inceptionYear>
 	<organization>
@@ -17,14 +17,14 @@
 			<name>Apache License</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
 			<distribution>repo</distribution>
-			<comments>The Azolla.org Source is released under version 2.0 of the Apache License.</comments>
+			<comments>The Azolla.org Projects is released under version 2.0 of the Apache License.</comments>
 		</license>
 	</licenses>
 	<developers>
 		<developer>
 			<id>Azolla</id>
-			<name>Azolla</name>
-			<email>sk@azolla.org</email>
+			<name>ShaneKing</name>
+			<email>github@azolla.org</email>
 			<url>https://github.com/Azolla</url>
 			<organization>Azollas</organization>
 			<organizationUrl>https://github.com/Azollas</organizationUrl>
@@ -40,7 +40,7 @@
 		<developer>
 			<id>iShaneKing</id>
 			<name>iShaneKing</name>
-			<email>isk@azolla.org</email>
+			<email>git@azolla.org</email>
 			<url>https://github.com/iShaneKing</url>
 			<organization>Azollas</organization>
 			<organizationUrl>https://github.com/Azollas</organizationUrl>
@@ -56,7 +56,7 @@
 	<contributors>
 		<contributor>
 			<name>Azolla</name>
-			<email>sk@azolla.org</email>
+			<email>github@azolla.org</email>
 			<url>https://github.com/Azolla</url>
 			<organization>Azollas</organization>
 			<organizationUrl>https://github.com/Azollas</organizationUrl>
@@ -76,32 +76,50 @@
 	<scm>
 		<connection>scm:git:git@github.com:Azollas/org.azolla.p.git</connection>
 		<developerConnection>scm:git:git@github.com:Azollas/org.azolla.p.git</developerConnection>
-		<url>git@github.com:Azollas/org.azolla.pgit</url>
+		<url>git@github.com:Azollas/org.azolla.p.git</url>
 	</scm>
 	<issueManagement>
 		<system>Github</system>
 		<url>https://github.com/Azollas/org.azolla.p/issues</url>
 	</issueManagement>
+	<distributionManagement>
+		<repository>
+			<id>oss</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
 	<properties>
-		<maven.compile.target>1.8</maven.compile.target>
-		<slf4j-api.version>1.7.6</slf4j-api.version>
-		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
 		<ant.version>1.9.3</ant.version>
+
 		<commons-io.version>2.4</commons-io.version>
-		<jsr305.version>2.0.3</jsr305.version>
-		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
-		<slf4j-log4j12.version>1.7.6</slf4j-log4j12.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<junit.version>4.11</junit.version>
-		<nbantext.version>4.0</nbantext.version>
 		<commons-net.version>3.3</commons-net.version>
+
 		<guava.version>16.0.1</guava.version>
-		<maven-surefire-plugin.version>2.17</maven-surefire-plugin.version>
-		<maven.compile.source>1.8</maven.compile.source>
-		<maven-release-plugin.version>2.5</maven-release-plugin.version>
-		<servlet-api.version>2.5</servlet-api.version>
-		<maven-surefire-report-plugin.version>2.17</maven-surefire-report-plugin.version>
+
+		<jsr305.version>2.0.3</jsr305.version>
+		<junit.version>4.11</junit.version>
+
 		<log4j.version>1.2.17</log4j.version>
+
+		<maven.compile.source>1.8</maven.compile.source>
+		<maven.compile.target>1.8</maven.compile.target>
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+		<maven-surefire-plugin.version>2.17</maven-surefire-plugin.version>
+		<maven-surefire-report-plugin.version>2.17</maven-surefire-report-plugin.version>
+		<maven-release-plugin.version>2.5</maven-release-plugin.version>
+		<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
+		<maven-source-plugin.version>2.4</maven-source-plugin.version>
+		<maven-javadoc-plugin.version>2.10.1</maven-javadoc-plugin.version>
+
+		<nbantext.version>4.0</nbantext.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<servlet-api.version>2.5</servlet-api.version>
+		<slf4j-api.version>1.7.6</slf4j-api.version>
+		<slf4j-log4j12.version>1.7.6</slf4j-log4j12.version>
+
 		<tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
 
 		<org.azolla.open.ling.version>1.0.0</org.azolla.open.ling.version>
@@ -231,4 +249,55 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<!-- Source -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>${maven-source-plugin.version}</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- Javadoc -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>${maven-javadoc-plugin.version}</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- GPG -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>${maven-gpg-plugin.version}</version>
+						<executions>
+							<execution>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

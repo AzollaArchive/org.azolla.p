@@ -119,7 +119,7 @@
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
 		<tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
 		<!-- Azollas -->
-		<org.azolla.open.ling.version>1.0.0</org.azolla.open.ling.version>
+		<org.azolla.l.ling.version>1.0.0</org.azolla.l.ling.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -186,9 +186,9 @@
 				<version>${tomcat7-maven-plugin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.azolla.open</groupId>
-				<artifactId>org.azolla.open.ling</artifactId>
-				<version>${org.azolla.open.ling.version}</version>
+				<groupId>org.azolla.l</groupId>
+				<artifactId>org.azolla.l.ling</artifactId>
+				<version>${org.azolla.l.ling.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

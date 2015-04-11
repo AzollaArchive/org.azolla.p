@@ -106,6 +106,7 @@
 		<junit.version>4.12</junit.version><!-- group:junit -->
 		<log4j.version>1.2.17</log4j.version><!-- group:log4j -->
 		<nbantext.version>4.0</nbantext.version><!-- group:netbeans;ref:ant;dep: -->
+		<pinyin4j.version>2.5.0</pinyin4j.version><!-- group:com.belerweb -->
 		<slf4j-api.version>1.7.12</slf4j-api.version><!-- group:org.slf4j -->
 		<slf4j-log4j12.version>1.7.12</slf4j-log4j12.version><!-- group:org.slf4j -->
 		<spring-web.version>4.1.6.RELEASE</spring-web.version><!-- group:org.springframework -->
@@ -147,6 +148,12 @@
 				<version>${guava.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${javax.servlet-api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
 				<groupId>com.google.code.findbugs</groupId>
 				<artifactId>jsr305</artifactId>
 				<version>${jsr305.version}</version>
@@ -168,10 +175,9 @@
 				<version>${nbantext.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>${javax.servlet-api.version}</version>
-				<scope>provided</scope>
+				<groupId>com.belerweb</groupId>
+				<artifactId>pinyin4j</artifactId>
+				<version>${pinyin4j.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>

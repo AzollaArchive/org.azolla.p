@@ -100,19 +100,28 @@
         <com.belerweb_pinyin4j_version>2.5.0</com.belerweb_pinyin4j_version>
         <com.google.code.findbugs_jsr305_version>3.0.0</com.google.code.findbugs_jsr305_version>
         <com.google.guava_guava_version>18.0</com.google.guava_guava_version>
-        <com.google.zxing_core_version>3.2.0</com.google.zxing_core_version>
+        <com.google.zxing_version>3.2.0</com.google.zxing_version>
+        <commons-fileupload_commons-fileupload_version>1.3.1</commons-fileupload_commons-fileupload_version>
         <commons-io_commons-io_version>2.4</commons-io_commons-io_version>
         <commons-net_commons-net_version>3.3</commons-net_commons-net_version>
+        <javax.inject_javax.inject_version>1</javax.inject_javax.inject_version>
         <javax.servlet_javax.servlet-api_version>3.1.0</javax.servlet_javax.servlet-api_version>
+        <javax.servlet_jstl_version>1.2</javax.servlet_jstl_version>
         <junit_junit_version>4.12</junit_junit_version>
         <log4j_log4j_version>1.2.17</log4j_log4j_version>
+        <mysql_mysql-connector-java_version>5.1.35</mysql_mysql-connector-java_version>
         <netbeans_nbantext_version>4.0</netbeans_nbantext_version><!-- ref:ant;dep: -->
         <org.apache.ant_ant_version>1.9.4</org.apache.ant_ant_version>
+        <org.apache.commons_commons-dbcp2_version>2.1</org.apache.commons_commons-dbcp2_version>
         <org.apache.tomcat.maven_tomcat7-maven-plugin_version>2.2</org.apache.tomcat.maven_tomcat7-maven-plugin_version>
-        <org.slf4j_slf4j-api_version>1.7.12</org.slf4j_slf4j-api_version>
-        <org.slf4j_slf4j-log4j12_version>1.7.12</org.slf4j_slf4j-log4j12_version>
-        <org.springframework_spring-web_version>4.1.6.RELEASE</org.springframework_spring-web_version>
-        <org.springframework_spring-webmvc_version>4.1.6.RELEASE</org.springframework_spring-webmvc_version>
+        <org.aspectj_version>1.8.5</org.aspectj_version>
+        <com.github.pagehelper_pagehelper_version>3.6.4</com.github.pagehelper_pagehelper_version>
+        <org.mybatis_mybatis_version>3.2.8</org.mybatis_mybatis_version>
+        <org.mybatis_mybatis-spring_version>1.2.2</org.mybatis_mybatis-spring_version>
+        <org.slf4j_version>1.7.12</org.slf4j_version>
+        <org.springframework_version>4.1.6.RELEASE</org.springframework_version>
+        <org.springframework.security_version>4.0.0.RELEASE</org.springframework.security_version>
+        <taglibs_standard_version>1.1.2</taglibs_standard_version>
 		<!-- Azollas -->
 		<org.azolla.l.ling.version>1.0.0</org.azolla.l.ling.version>
 		<!-- plugins -->
@@ -146,7 +155,12 @@
             <dependency>
                 <groupId>com.google.zxing</groupId>
                 <artifactId>core</artifactId>
-                <version>${com.google.zxing_core_version}</version>
+                <version>${com.google.zxing_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload_commons-fileupload_version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>
@@ -159,10 +173,20 @@
                 <version>${commons-net_commons-net_version}</version>
             </dependency>
             <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${javax.inject_javax.inject_version}</version>
+            </dependency>
+            <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${javax.servlet_javax.servlet-api_version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${javax.servlet_jstl_version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
@@ -176,6 +200,11 @@
                 <version>${log4j_log4j_version}</version>
             </dependency>
             <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql_mysql-connector-java_version}</version>
+            </dependency>
+            <dependency>
                 <groupId>netbeans</groupId>
                 <artifactId>nbantext</artifactId>
                 <version>${netbeans_nbantext_version}</version>
@@ -186,30 +215,99 @@
 				<version>${org.apache.ant_ant_version}</version>
 			</dependency>
             <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>${org.apache.commons_commons-dbcp2_version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${org.apache.tomcat.maven_tomcat7-maven-plugin_version}</version>
+                <scope>provided</scope>
             </dependency>
-			<dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${org.aspectj_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${org.aspectj_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${com.github.pagehelper_pagehelper_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${org.mybatis_mybatis_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${org.mybatis_mybatis-spring_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${org.slf4j_version}</version>
+            </dependency>
+            <dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>${org.slf4j_slf4j-api_version}</version>
+				<version>${org.slf4j_version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
-				<version>${org.slf4j_slf4j-log4j12_version}</version>
+				<version>${org.slf4j_version}</version>
 			</dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${org.springframework_version}</version>
+                <exclusions>
+                    <!-- Exclude Commons Logging in favor of SLF4j -->
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${org.springframework_version}</version>
+            </dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
-				<version>${org.springframework_spring-web_version}</version>
+				<version>${org.springframework_version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
-				<version>${org.springframework_spring-webmvc_version}</version>
+				<version>${org.springframework_version}</version>
 			</dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${org.springframework.security_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${org.springframework.security_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>taglibs</groupId>
+                <artifactId>standard</artifactId>
+                <version>${taglibs_standard_version}</version>
+            </dependency>
+
 			<dependency>
 				<groupId>org.azolla.l</groupId>
 				<artifactId>org.azolla.l.ling</artifactId>

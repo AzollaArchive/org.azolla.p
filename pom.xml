@@ -98,6 +98,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- dependencies -->
         <com.belerweb_pinyin4j_version>2.5.0</com.belerweb_pinyin4j_version>
+        <com.fasterxml.jackson.core_version>2.5.4</com.fasterxml.jackson.core_version>
         <com.github.pagehelper_pagehelper_version>3.6.4</com.github.pagehelper_pagehelper_version>
         <com.google.code.findbugs_jsr305_version>3.0.0</com.google.code.findbugs_jsr305_version>
         <com.google.guava_guava_version>18.0</com.google.guava_guava_version>
@@ -144,6 +145,21 @@
                 <version>${com.belerweb_pinyin4j_version}</version>
             </dependency>
             <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${com.fasterxml.jackson.core_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${com.fasterxml.jackson.core_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${com.fasterxml.jackson.core_version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
                 <version>${com.github.pagehelper_pagehelper_version}</version>
@@ -161,6 +177,11 @@
             <dependency>
                 <groupId>com.google.zxing</groupId>
                 <artifactId>core</artifactId>
+                <version>${com.google.zxing_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>javase</artifactId>
                 <version>${com.google.zxing_version}</version>
             </dependency>
             <dependency>

@@ -125,7 +125,7 @@
         <org.springframework.security_version>4.0.0.RELEASE</org.springframework.security_version>
         <taglibs_standard_version>1.1.2</taglibs_standard_version>
 		<!-- Azollas -->
-		<org.azolla.l.ling.version>1.0.0</org.azolla.l.ling.version>
+		<org.azolla.l.ling.version>1.0.1</org.azolla.l.ling.version>
 		<!-- plugins -->
 		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version><!-- org.apache.maven -->
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version><!-- org.apache.maven.plugins -->

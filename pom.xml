@@ -127,6 +127,7 @@
 		<!-- Azollas -->
 		<org.azolla.l.ling.version>1.0.1</org.azolla.l.ling.version>
 		<!-- plugins -->
+        <org.jacoco_jacoco-maven-plugin_version>0.7.5.201505241946</org.jacoco_jacoco-maven-plugin_version>
 		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version><!-- org.apache.maven -->
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version><!-- org.apache.maven.plugins -->
 		<maven-javadoc-plugin.version>2.10.2</maven-javadoc-plugin.version><!-- org.apache.maven.plugins -->
@@ -403,6 +404,25 @@
 						<showSuccess>false</showSuccess>
 					</configuration>
 				</plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${org.jacoco_jacoco-maven-plugin_version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>report</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
 			</plugins>
 		</pluginManagement>
 	</build>

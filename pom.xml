@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.azolla.p</groupId>
 	<artifactId>org.azolla.p</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<packaging>pom</packaging>
 	<name>Azolla.org Projects Top Parent</name>
 	<description>This project is Azolla.org projects top parent</description>
@@ -412,7 +412,7 @@
 					<configuration>
 						<parallel>methods</parallel>
 						<threadCount>2</threadCount>
-						<argLine>-Dfile.encoding=UTF-8</argLine>
+						<argLine>-Dfile.encoding=UTF-8 ${argLine}</argLine>
 						<!-- <skip>true</skip> -->
 						<!-- <testFailureIgnore>true</testFailureIgnore> -->
 					</configuration>

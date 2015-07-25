@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.azolla.p</groupId>
 	<artifactId>org.azolla.p</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>pom</packaging>
 	<name>Azolla.org Projects Top Parent</name>
 	<description>This project is Azolla.org projects top parent</description>
@@ -116,7 +116,6 @@
         <netbeans_nbantext_version>4.0</netbeans_nbantext_version><!-- ref:ant;dep: -->
         <org.apache.ant_ant_version>1.9.4</org.apache.ant_ant_version>
         <org.apache.commons_commons-dbcp2_version>2.1</org.apache.commons_commons-dbcp2_version>
-        <org.apache.tomcat.maven_tomcat7-maven-plugin_version>2.2</org.apache.tomcat.maven_tomcat7-maven-plugin_version>
         <org.aspectj_version>1.8.5</org.aspectj_version>
         <org.mybatis_mybatis_version>3.2.8</org.mybatis_mybatis_version>
         <org.mybatis_mybatis-spring_version>1.2.2</org.mybatis_mybatis-spring_version>
@@ -124,9 +123,10 @@
         <org.springframework_version>4.1.6.RELEASE</org.springframework_version>
         <org.springframework.security_version>4.0.0.RELEASE</org.springframework.security_version>
         <taglibs_standard_version>1.1.2</taglibs_standard_version>
-		<!-- Azollas -->
-		<org.azolla.l.ling.version>1.0.1</org.azolla.l.ling.version>
-		<!-- plugins -->
+        <!-- Azollas -->
+        <org.azolla.l.ling.version>1.0.1</org.azolla.l.ling.version>
+        <!-- plugins -->
+        <org.apache.tomcat.maven_tomcat7-maven-plugin_version>2.2</org.apache.tomcat.maven_tomcat7-maven-plugin_version>
         <org.jacoco_jacoco-maven-plugin_version>0.7.5.201505241946</org.jacoco_jacoco-maven-plugin_version>
 		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version><!-- org.apache.maven -->
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version><!-- org.apache.maven.plugins -->
@@ -253,12 +253,6 @@
                 <version>${org.apache.commons_commons-dbcp2_version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>${org.apache.tomcat.maven_tomcat7-maven-plugin_version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
                 <version>${org.aspectj_version}</version>
@@ -356,6 +350,15 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>${org.apache.tomcat.maven_tomcat7-maven-plugin_version}</version>
+                    <configuration>
+                        <path>/</path>
+                        <contextReloadable>true</contextReloadable>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>

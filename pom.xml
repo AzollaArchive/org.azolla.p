@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.azolla.p</groupId>
 	<artifactId>org.azolla.p</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>pom</packaging>
 	<name>Azolla.org Projects Top Parent</name>
 	<description>This project is Azolla.org projects top parent</description>
@@ -100,7 +100,8 @@
         <com.aliyun.oss_aliyun-sdk-oss_version>2.0.5</com.aliyun.oss_aliyun-sdk-oss_version>
         <com.belerweb_pinyin4j_version>2.5.0</com.belerweb_pinyin4j_version>
         <com.fasterxml.jackson.core_version>2.6.0</com.fasterxml.jackson.core_version>
-        <com.github.pagehelper_pagehelper_version>3.6.4</com.github.pagehelper_pagehelper_version>
+        <com.github.jsqlparser_jsqlparser_version>0.9.3</com.github.jsqlparser_jsqlparser_version>
+        <com.github.pagehelper_pagehelper_version>4.0.0</com.github.pagehelper_pagehelper_version>
         <com.google.code.findbugs_jsr305_version>3.0.0</com.google.code.findbugs_jsr305_version>
         <com.google.guava_guava_version>18.0</com.google.guava_guava_version>
         <com.google.zxing_version>3.2.0</com.google.zxing_version>
@@ -166,6 +167,11 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${com.fasterxml.jackson.core_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>${com.github.jsqlparser_jsqlparser_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.pagehelper</groupId>

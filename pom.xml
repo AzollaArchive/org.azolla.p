@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.azolla.p</groupId>
 	<artifactId>org.azolla.p</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
 	<packaging>pom</packaging>
 	<name>Azolla.org Projects Top Parent</name>
 	<description>This project is Azolla.org projects top parent</description>
@@ -110,6 +110,7 @@
         <commons-io_commons-io_version>2.4</commons-io_commons-io_version>
         <commons-net_commons-net_version>3.3</commons-net_commons-net_version>
         <javax.inject_javax.inject_version>1</javax.inject_javax.inject_version>
+        <javax.persistence_persistence-api_version>1.0.2</javax.persistence_persistence-api_version>
         <javax.servlet_javax.servlet-api_version>3.1.0</javax.servlet_javax.servlet-api_version>
         <javax.servlet_jstl_version>1.2</javax.servlet_jstl_version>
         <junit_junit_version>4.12</junit_junit_version>
@@ -125,9 +126,10 @@
         <org.springframework_version>4.2.0.RELEASE</org.springframework_version>
         <org.springframework.security_version>4.0.2.RELEASE</org.springframework.security_version>
         <taglibs_standard_version>1.1.2</taglibs_standard_version>
+        <tk.mybatis_mapper_version>3.1.2</tk.mybatis_mapper_version>
         <!-- Azollas -->
-        <org.azolla.l.version>1.0.6</org.azolla.l.version>
-        <org.azolla.w.version>1.0.6</org.azolla.w.version>
+        <org.azolla.l.version>1.0.7</org.azolla.l.version>
+        <org.azolla.w.version>1.1.0</org.azolla.w.version>
         <!-- plugins -->
         <org.apache.tomcat.maven_tomcat7-maven-plugin_version>2.2</org.apache.tomcat.maven_tomcat7-maven-plugin_version>
         <org.jacoco_jacoco-maven-plugin_version>0.7.5.201505241946</org.jacoco_jacoco-maven-plugin_version>
@@ -222,6 +224,11 @@
                 <groupId>javax.inject</groupId>
                 <artifactId>javax.inject</artifactId>
                 <version>${javax.inject_javax.inject_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${javax.persistence_persistence-api_version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -341,6 +348,11 @@
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-web</artifactId>
                 <version>${org.springframework.security_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${tk.mybatis_mapper_version}</version>
             </dependency>
 
 			<dependency>

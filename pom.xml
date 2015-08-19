@@ -2,10 +2,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.azolla.p</groupId>
 	<artifactId>org.azolla.p</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9</version>
 	<packaging>pom</packaging>
 	<name>Azolla.org Projects Top Parent</name>
-	<description>This project is Azolla.org projects top parent</description>
+	<description>Azolla.org Projects Top Parent</description>
 	<url>https://github.com/Azollas/org.azolla.p</url>
 	<inceptionYear>2011</inceptionYear>
 	<organization>
@@ -129,7 +129,7 @@
         <tk.mybatis_mapper_version>3.1.2</tk.mybatis_mapper_version>
         <!-- Azollas -->
         <org.azolla.l.version>1.0.7</org.azolla.l.version>
-        <org.azolla.w.version>1.1.0</org.azolla.w.version>
+        <org.azolla.w.version>2.0.0</org.azolla.w.version>
         <!-- plugins -->
         <org.apache.tomcat.maven_tomcat7-maven-plugin_version>2.2</org.apache.tomcat.maven_tomcat7-maven-plugin_version>
         <org.jacoco_jacoco-maven-plugin_version>0.7.5.201505241946</org.jacoco_jacoco-maven-plugin_version>
@@ -362,7 +362,7 @@
 			</dependency>
             <dependency>
                 <groupId>org.azolla.w</groupId>
-                <artifactId>org.azolla.w.alioss</artifactId>
+                <artifactId>org.azolla.w.leon</artifactId>
                 <version>${org.azolla.w.version}</version>
             </dependency>
 		</dependencies>

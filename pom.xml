@@ -128,7 +128,7 @@
         <taglibs_standard_version>1.1.2</taglibs_standard_version>
         <tk.mybatis_mapper_version>3.1.2</tk.mybatis_mapper_version>
         <!-- Azollas -->
-        <org.azolla.l.version>1.0.7</org.azolla.l.version>
+        <org.azolla.l.version>1.0.8</org.azolla.l.version>
         <org.azolla.w.version>2.0.0</org.azolla.w.version>
         <!-- plugins -->
         <org.apache.tomcat.maven_tomcat7-maven-plugin_version>2.2</org.apache.tomcat.maven_tomcat7-maven-plugin_version>

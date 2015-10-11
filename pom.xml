@@ -127,6 +127,7 @@
         <org.springframework_version>4.2.0.RELEASE</org.springframework_version>
         <org.springframework.security_version>4.0.2.RELEASE</org.springframework.security_version>
         <taglibs_standard_version>1.1.2</taglibs_standard_version>
+        <org.swinglabs.swingx_swingx-all_versioin>1.6.5-1</org.swinglabs.swingx_swingx-all_versioin>
         <tk.mybatis_mapper_version>3.1.2</tk.mybatis_mapper_version>
         <!-- Azollas -->
         <org.azolla.l.version>2.0.2</org.azolla.l.version>
@@ -359,6 +360,11 @@
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-web</artifactId>
                 <version>${org.springframework.security_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.swinglabs.swingx</groupId>
+                <artifactId>swingx-all</artifactId>
+                <version>${org.swinglabs.swingx_swingx-all_versioin}</version>
             </dependency>
             <dependency>
                 <groupId>tk.mybatis</groupId>
